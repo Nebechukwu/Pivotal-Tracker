@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pivotal Tracker</title>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+<!-- sign-In form -->
+<form>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Sign In</button>
+</form>
+<!-- form validation -->
+<input type="email" id="email" name="email" required>
+<small class="error-message" id="email-error">Email is required</small>
+<!-- submit button -->
+<button type="submit">Sign In</button>
+<!-- linking to signUp page -->
+<p>Don't have an account? <a href="/signup">Sign Up</a></p>
+
+<!-- signUp page -->
+<form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <!-- Add more fields as necessary -->
+    
+    <button type="submit">Sign Up</button>
+</form>
+<!-- signUp form validation -->
+<input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+<small class="error-message" id="email-error">Invalid email address</small>
+
+<!-- submit button -->
+<button type="submit" id="submit-button" disabled>Sign Up</button>
+<!-- linking signIn to signUp -->
+<p>Already have an account? <a href="/signin">Sign In</a></p
+>
+<!-- Question form -->
+<form>
+    <label for="meet-Tick">Your Question:</label>
+    <textarea id="meet-Tick" name="question" rows="4" required></textarea>
+
+    <!-- Add additional fields as needed -->
+
+    <button type="submit">Post Question</button>
+</form>
+<!-- meetUp selection -->
+<label for="meetup">Select Meetup:</label>
+<select id="meetup" name="meetup" required>
+    <option value="">Select Meetup</option>
+    <!-- Populate options dynamically with available meetups -->
+</select>
+<textarea id="meet-Tick" name="question" rows="4" required></textarea>
+<small class="error-message" id="question-error">Question is required</small>
+<button type="submit">Post Question</button>
+<!-- cancel button -->
+<button type="button" onclick="window.history.back()">Cancel</button>
+
+</body>
+</html>
